@@ -26,7 +26,7 @@
 把下面这句话发给你的 AI 助手：
 
 ```
-请将公开仓库 https://github.com/Xuefeng122/love-strategist 下载并安装为本地 Skill。
+请将公开仓库 https://github.com/fcmyoo/love-strategist 下载并安装为本地 Skill。
 ```
 
 安装到用户级目录后，Skill 目录应包含 `SKILL.md`、`agents/openai.yaml`、`references/` 与 `scripts/`。
