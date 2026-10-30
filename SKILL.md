@@ -86,7 +86,7 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 | MBTI | `references/knowledge/04-MBTI人格与匹配.md` |
 | 冲突修复 | `references/knowledge/07-沟通冲突与修复.md` |
 | 同意、性与亲密边界 | `references/knowledge/08-同意边界性与亲密.md` |
-| 金钱家务育儿、分手背叛 | 知识 12、15 中与问题对应的一份 |
+| 金钱家务育儿、分手背叛 | `references/knowledge/12-金钱家务育儿与双方家庭.md` 与 `references/knowledge/15-分手背叛与关系修复.md` 中与问题对应的一份 |
 | 家暴、跟踪、胁迫、法律或危机 | `references/knowledge/17-中国法律安全与危机转介.md` |
 | 用户要求来源、证据等级或延伸阅读 | `references/knowledge/01-证据分级与内容边界.md`；`references/knowledge/19-核心书单与论文索引.md` |
 
