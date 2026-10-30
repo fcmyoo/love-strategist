@@ -37,6 +37,17 @@ REQUIRED_PRACTICAL = (
     "公开表达案例的伦理转译.md",
 )
 
+REQUIRED_TABLE_ROUTES = (
+    "references/practical/童锦程风格与心智模型.md",
+    "references/practical/实战话术编排器：从一句回复到后续分支.md",
+    "references/knowledge/20-经典社交体系的机制、证据与风险边界.md",
+    "references/knowledge/05-PUA操控与伦理替代.md",
+    "references/knowledge/04-MBTI人格与匹配.md",
+    "references/knowledge/17-中国法律安全与危机转介.md",
+    "references/practical/长期记忆与关系档案.md",
+)
+
+
 def require(path: str) -> Path:
     target = ROOT / path
     if not target.exists():
@@ -139,6 +150,24 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
         for route in required_routes:
             if route not in content:
                 ERRORS.append(f"SKILL.md missing required progressive-disclosure route: {route}")
+        routing_rows = [line for line in content.splitlines() if line.startswith("| ")]
+        known_numbers = {
+            path.name.split("-", 1)[0]
+            for path in (ROOT / "references" / "knowledge").glob("*.md")
+        }
+        for line in routing_rows:
+            for group in re.findall(r"知识\s*([\d、,，\s]+)", line):
+                for number in re.findall(r"\d+", group):
+                    if number not in known_numbers:
+                        ERRORS.append(
+                            "routing row references a missing knowledge file: "
+                            f"知识 {number}"
+                        )
+        for route in REQUIRED_TABLE_ROUTES:
+            if not any(route in line for line in routing_rows):
+                ERRORS.append(
+                    "SKILL.md required route is absent from the routing table: " + route
+                )
 
         regression_markers = (
             "## 每次分析",
