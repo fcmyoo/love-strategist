@@ -68,6 +68,11 @@ def validate_frontmatter() -> None:
         ERRORS.append(f"invalid skill name: {name!r}")
     if not description or len(description) > 1024 or "<" in description or ">" in description:
         ERRORS.append("description is empty, too long, or contains angle brackets")
+    for keyword in ("长期", "档案"):
+        if keyword not in description:
+            ERRORS.append(
+                f"SKILL.md description missing trigger keyword: {keyword}"
+            )
 
 
 def approximate_token_count(content: str) -> int:
@@ -128,6 +133,7 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
             "references/knowledge/04-MBTI人格与匹配.md",
             "references/knowledge/17-中国法律安全与危机转介.md",
             "references/practical/长期记忆与关系档案.md",
+            "references/practical/00-导读与使用分级.md",
             "默认只读取当前问题直接需要的 1–3 份参考",
         )
         for route in required_routes:
