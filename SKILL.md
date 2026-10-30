@@ -44,6 +44,7 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 - 用户转述：视为用户提供的信息；精确措辞不可核实时注明。
 - 线下、通话或转写：区分观察、感受和解释。
 - 混合素材：分别标注"截图能证明""转述提示""仍未知"。
+- 本机微信数据（如已配置 weflow-cli）：按 `references/practical/weflow-cli微信聊天记录分析适配.md` 操作；工具只读，发起前先锁定说话人映射，导出的原始聊天不进长期记忆。
 
 资料彼此矛盾时指出矛盾；缺失信息保持未知，不为了完整而虚构。
 
@@ -71,6 +72,7 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 | Blueprint 内在状态、自然流、Mystery、冷读 | 先读 `references/knowledge/20-经典社交体系的机制、证据与风险边界.md` |
 | PUA、推拉、煤气灯、操控 | `references/knowledge/05-PUA操控与伦理替代.md` |
 | 聊天截图、网聊、数字关系 | `references/knowledge/09-在线约会与数字关系.md` |
+| 本机微信聊天记录读取、导出、证据固定 | `references/practical/weflow-cli微信聊天记录分析适配.md` |
 | 主动表达、第一次见面 | `references/practical/主动表达、第一次见面与自然接触.md` |
 | 投入失衡、降级或退出 | `references/practical/关系投入失衡：互惠判断、降级投入与退出决策.md` |
 | 依恋、焦虑或情绪调节 | `references/knowledge/03-依恋理论与情绪调节.md` |

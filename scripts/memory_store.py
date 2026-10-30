@@ -30,7 +30,8 @@ SCOPES = set(SCOPE_LIMITS)
 SOURCE_TYPES = {
     "user_explicit",
     "user_report",
-    "chatlab",
+    "weflow",
+    "chatlab",  # 兼容旧记录（历史 ChatLab 适配期写入）
     "tool",
     "assistant_inference",
 }
@@ -193,7 +194,7 @@ def validate_delta(raw: dict[str, Any]) -> dict[str, Any]:
         raise MemoryErrorWithCode(
             "SOURCE_NOT_ELIGIBLE", "对象事实和关系快照只接受用户明确陈述或转述"
         )
-    if source_type in {"chatlab", "tool", "assistant_inference"} and scope not in {
+    if source_type in {"weflow", "chatlab", "tool", "assistant_inference"} and scope not in {
         "event",
         "hypothesis",
     }:
