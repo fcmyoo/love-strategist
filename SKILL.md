@@ -76,7 +76,7 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 | 一句话回复、开场、邀约、演练 | `references/practical/实战话术编排器：从一句回复到后续分支.md` |
 | 松弛感、现场取材、轻松调情 | `references/practical/场景感、松弛感与社交校准：从接话到关系推进.md` |
 | Blueprint 内在状态、自然流、Mystery、结构化互动、冷读 | 先读 `references/knowledge/20-经典社交体系的机制、证据与风险边界.md`；要落地时再读 `references/practical/自然流、内在状态与结构化互动：伦理能力转译.md` |
-| 冷读误用、PUA、推拉、贬低、服从测试、煤气灯 | `references/knowledge/05-PUA操控与伦理替代.md`，必要时再读知识 20 |
+| 冷读误用、PUA、推拉、贬低、服从测试、煤气灯 | `references/knowledge/05-PUA操控与伦理替代.md`，必要时再读 `references/knowledge/20-经典社交体系的机制、证据与风险边界.md` |
 | 聊天截图、网聊、媒介误读、隐私或诈骗 | `references/knowledge/09-在线约会与数字关系.md` |
 | 本机微信聊天记录读取、导出、证据固定 | `references/practical/weflow-cli微信聊天记录分析适配.md` |
 | 跨任务档案、记忆同意、自动更新、撤销或删除 | `references/practical/长期记忆与关系档案.md` |
