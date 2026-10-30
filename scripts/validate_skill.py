@@ -40,11 +40,24 @@ REQUIRED_PRACTICAL = (
 REQUIRED_TABLE_ROUTES = (
     "references/practical/童锦程风格与心智模型.md",
     "references/practical/实战话术编排器：从一句回复到后续分支.md",
+    "references/practical/场景感、松弛感与社交校准：从接话到关系推进.md",
     "references/knowledge/20-经典社交体系的机制、证据与风险边界.md",
+    "references/practical/自然流、内在状态与结构化互动：伦理能力转译.md",
     "references/knowledge/05-PUA操控与伦理替代.md",
-    "references/knowledge/04-MBTI人格与匹配.md",
-    "references/knowledge/17-中国法律安全与危机转介.md",
+    "references/knowledge/09-在线约会与数字关系.md",
+    "references/practical/weflow-cli微信聊天记录分析适配.md",
     "references/practical/长期记忆与关系档案.md",
+    "references/practical/主动表达、第一次见面与自然接触.md",
+    "references/practical/关系投入失衡：互惠判断、降级投入与退出决策.md",
+    "references/knowledge/03-依恋理论与情绪调节.md",
+    "references/knowledge/04-MBTI人格与匹配.md",
+    "references/knowledge/07-沟通冲突与修复.md",
+    "references/knowledge/08-同意边界性与亲密.md",
+    "references/knowledge/12-金钱家务育儿与双方家庭.md",
+    "references/knowledge/15-分手背叛与关系修复.md",
+    "references/knowledge/17-中国法律安全与危机转介.md",
+    "references/knowledge/01-证据分级与内容边界.md",
+    "references/knowledge/19-核心书单与论文索引.md",
 )
 
 
