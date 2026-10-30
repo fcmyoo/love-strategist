@@ -127,6 +127,7 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
             "references/knowledge/05-PUA操控与伦理替代.md",
             "references/knowledge/04-MBTI人格与匹配.md",
             "references/knowledge/17-中国法律安全与危机转介.md",
+            "references/practical/长期记忆与关系档案.md",
             "默认只读取当前问题直接需要的 1–3 份参考",
         )
         for route in required_routes:
@@ -152,10 +153,43 @@ def validate_routes_and_regressions(runtime_only: bool) -> None:
             "不协助性胁迫、跟踪、威胁、勒索、散布隐私或诈骗",
             "先确认安全并建议联系紧急服务",
             "始终让用户保留最终决定权",
+            "首次明确同意后才启用",
+            "只读、不解密、不外传",
         )
         for marker in regression_markers:
             if marker not in content:
                 ERRORS.append(f"SKILL.md missing required behavior boundary: {marker}")
+
+def validate_route_targets() -> None:
+    """校验反引号包裹的 md 路径是否真实存在（validate_markdown_links 只覆盖 markdown 链接语法）。"""
+    pattern = re.compile(r"`([^`\n]*\.md)`")
+    fence = re.compile(r"^\s*```")
+    runtime_docs = [ROOT / "SKILL.md", ROOT / "README.md"]
+    runtime_docs += sorted((ROOT / "references").rglob("*.md"))
+    for markdown in runtime_docs:
+        if not markdown.exists() or ".git" in markdown.parts:
+            continue
+        in_fence = False
+        for lineno, line in enumerate(markdown.read_text(encoding="utf-8").splitlines(), 1):
+            if fence.match(line):
+                in_fence = not in_fence
+                continue
+            if in_fence:
+                continue
+            for raw in pattern.findall(line):
+                target = raw.strip()
+                if not target or target.startswith(("http://", "https://")):
+                    continue
+                if target.startswith("references/"):
+                    resolved = ROOT / target
+                else:
+                    resolved = markdown.parent / target
+                if not resolved.exists():
+                    ERRORS.append(
+                        f"route target does not exist: {markdown.relative_to(ROOT)}:"
+                        f"{lineno} -> {target}"
+                    )
+
 
 def validate_runtime_boundaries() -> None:
     if (ROOT / ".git").exists():
@@ -234,6 +268,7 @@ def main() -> int:
     validate_routes_and_regressions(runtime_only)
     validate_runtime_boundaries()
     validate_markdown_links()
+    validate_route_targets()
     validate_placeholders()
     if ERRORS:
         for error in ERRORS:

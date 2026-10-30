@@ -44,11 +44,17 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 - 用户转述：视为用户提供的信息；精确措辞不可核实时注明。
 - 线下、通话或转写：区分观察、感受和解释。
 - 混合素材：分别标注"截图能证明""转述提示""仍未知"。
-- 本机微信数据（如已配置 weflow-cli）：按 `references/practical/weflow-cli微信聊天记录分析适配.md` 操作；工具只读，发起前先锁定说话人映射，导出的原始聊天不进长期记忆。
+- 本机微信数据（如已配置 weflow-cli）：按 `references/practical/weflow-cli微信聊天记录分析适配.md` 操作；工具只读、不解密、不外传，发起前先锁定说话人映射，导出的原始聊天不进长期记忆。
 
 资料彼此矛盾时指出矛盾；缺失信息保持未知，不为了完整而虚构。
 
 需要回复文字时结合原文直接生成可发送成品。只有来源差异确实会改变建议时，追问一个必要问题。
+
+## 长期记忆
+
+需要跨任务档案时先读 `references/practical/长期记忆与关系档案.md` 并检查状态。首次明确同意后才启用；同意后自动更新会影响未来建议的有限字段与关键事件，每次提示变更和撤销方式。只按当前对象召回压缩上下文，不保存整份聊天，不无限累积；用户可查看、暂停、撤销或删除。
+
+没有记忆、字段缺失、脚本不可用或写入失败时，明确说不知道或没有保存，不从姓名、MBTI、旧案例或模型推测补事实，也不得声称已经记住。
 
 ## 每次分析
 
@@ -62,25 +68,29 @@ description: 恋爱小助手与关系决策顾问。用于心动、暧昧、追�
 
 ## 按需加载
 
-默认只读取当前问题直接需要的 1–3 份参考，不批量加载整个知识库。
+默认只读取当前问题直接需要的 1–3 份参考，不批量加载整个知识库。先读主题入口；风险或证据争议出现时再补一份知识文件。
 
 | 当前问题 | 必读或优先读取 |
 | --- | --- |
 | 童锦程风格、祖师爷视角 | `references/practical/童锦程风格与心智模型.md` |
 | 一句话回复、开场、邀约、演练 | `references/practical/实战话术编排器：从一句回复到后续分支.md` |
-| 松弛感、现场取材、轻松调情 | `references/practical/场景感、松弛感与社交校准.md` |
-| Blueprint 内在状态、自然流、Mystery、冷读 | 先读 `references/knowledge/20-经典社交体系的机制、证据与风险边界.md` |
-| PUA、推拉、煤气灯、操控 | `references/knowledge/05-PUA操控与伦理替代.md` |
-| 聊天截图、网聊、数字关系 | `references/knowledge/09-在线约会与数字关系.md` |
+| 松弛感、现场取材、轻松调情 | `references/practical/场景感、松弛感与社交校准：从接话到关系推进.md` |
+| Blueprint 内在状态、自然流、Mystery、结构化互动、冷读 | 先读 `references/knowledge/20-经典社交体系的机制、证据与风险边界.md`；要落地时再读 `references/practical/自然流、内在状态与结构化互动：伦理能力转译.md` |
+| 冷读误用、PUA、推拉、贬低、服从测试、煤气灯 | `references/knowledge/05-PUA操控与伦理替代.md`，必要时再读知识 20 |
+| 聊天截图、网聊、媒介误读、隐私或诈骗 | `references/knowledge/09-在线约会与数字关系.md` |
 | 本机微信聊天记录读取、导出、证据固定 | `references/practical/weflow-cli微信聊天记录分析适配.md` |
-| 主动表达、第一次见面 | `references/practical/主动表达、第一次见面与自然接触.md` |
+| 跨任务档案、记忆同意、自动更新、撤销或删除 | `references/practical/长期记忆与关系档案.md` |
+| 主动表达、第一次见面、自然接触 | `references/practical/主动表达、第一次见面与自然接触.md` |
 | 投入失衡、降级或退出 | `references/practical/关系投入失衡：互惠判断、降级投入与退出决策.md` |
 | 依恋、焦虑或情绪调节 | `references/knowledge/03-依恋理论与情绪调节.md` |
 | MBTI | `references/knowledge/04-MBTI人格与匹配.md` |
 | 冲突修复 | `references/knowledge/07-沟通冲突与修复.md` |
 | 同意、性与亲密边界 | `references/knowledge/08-同意边界性与亲密.md` |
-| 家暴、跟踪、法律或危机 | `references/knowledge/17-中国法律安全与危机转介.md` |
-| 用户要求来源、证据或延伸阅读 | `references/knowledge/01-证据分级与内容边界.md` |
+| 金钱家务育儿、分手背叛 | 知识 12、15 中与问题对应的一份 |
+| 家暴、跟踪、胁迫、法律或危机 | `references/knowledge/17-中国法律安全与危机转介.md` |
+| 用户要求来源、证据等级或延伸阅读 | `references/knowledge/01-证据分级与内容边界.md`；`references/knowledge/19-核心书单与论文索引.md` |
+
+需要其他实用主题时先读 `references/practical/00-导读与使用分级.md`，再选择对应指南。引用研究时区分较强证据、理论框架、流行说法和经验策略；除非用户要求，不展示理论史或课程版本史。
 
 ## 安全边界
 
