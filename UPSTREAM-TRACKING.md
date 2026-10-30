@@ -33,3 +33,15 @@
 4. 合并后同步三处：本仓库 main（push 到 origin）→ 本机技能目录
    `C:/Users/leewi/.workbuddy/skills/love-strategist/` → 更新本文件基线。
 5. 判断不确定或有冲突时：**不要 push**，向用户汇报等待指示。
+
+## 本地定制区（上游更新不得覆盖）
+
+以下内容是用户本机定制，不来自任何源仓库，合并时必须保留：
+
+- `references/practical/weflow-cli微信聊天记录分析适配.md`
+  —— 2026-10-30 将原 ChatLab 适配替换为用户自有的本机工具 weflow-cli
+  （<https://github.com/fcmyoo/weflow-cli>）命令面：contacts / messages / export /
+  evidence / report / chat-stats / awaiting / draft / sync 等。
+  两个源仓库若将来出现同名或等价的"聊天记录分析适配"文件，
+  **不要用它覆盖本文件**；如需整合，只做增量补充并保留 weflow-cli 命令面。
+- `scripts/memory_store.py` 的 `weflow` source_type（`chatlab` 仅作旧记录兼容）。
